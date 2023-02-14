@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="secret-info">My Secreate inFo</h1>
+    <input
+      type="text"
+      name=""
+      id="inputField"
+      placeholder="please type Delet"
+    />
+    <button id="btnDelet" disabled>Delet</button>
+
+    <script>
+      document
+        .getElementById("inputField")
+        .addEventListener("keyup", function () {
+          const text = event.target.value;
+          const deleteBtn = document.getElementById("btnDelet");
+          if (text === "delete") {
+            deleteBtn.removeAttribute("disabled");
+          }
+        });
+
+      document
+        .getElementById("btnDelet")
+        .addEventListener("click", function () {
+          const Secret = document.getElementById("secret-info");
+          Secret.style.display = "none";
+        });
+    </script>
+  </body>
+</html>

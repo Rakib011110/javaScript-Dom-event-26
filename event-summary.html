@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Final dom Event Handler</h1>
+    <h2 id="inputText">Defoult Input Text</h2>
+    <input type="text" name="" id="inputField" />
+    <button id="btnUpdate">Update</button>
+    <h3 id="handler-status">Defoult Text</h3>
+    <button onclick="handOnclick()">handle event by onlick</button>
+
+    <button id="event-listener">Handle event by addEventListener</button>
+    <script>
+      function handOnclick() {
+        const handlerStatus = document.getElementById("handler-status");
+        handlerStatus.innerText =
+          "handled by Funtion attached on onClick Atttributes";
+      }
+      document
+        .getElementById("event-listener")
+        .addEventListener("click", function () {
+          const handlerStatus = document.getElementById("handler-status");
+          handlerStatus.innerText = "text update by event lisstherssss";
+        });
+
+      document
+        .getElementById("btnUpdate")
+        .addEventListener("click", function () {
+          console.log("update");
+          const inpuField = document.getElementById("inputField");
+          const inputText = inpuField.value;
+          const p = document.getElementById("inputText");
+
+          p.innerText = inputText;
+          inpuField.value = " ";
+        });
+    </script>
+  </body>
+</html>

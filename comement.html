@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Please Add Your Comment</h2>
+    <div id="commentList">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, quia.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, quia.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, quia.
+      </p>
+    </div>
+    <div>
+      <textarea name="" id="newComment" cols="30" rows="10"></textarea> <br />
+      <button id="commentBtn">Add Comment</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("commentBtn")
+        .addEventListener("click", function () {
+          const commentBox = document.getElementById("newComment");
+          const newCommnet = commentBox.value;
+          console.log("amr sonar");
+
+          const CommentContainer = document.getElementById("commentList");
+          const p = document.createElement("p");
+          p.innerText = newCommnet;
+          CommentContainer.appendChild(p);
+        });
+    </script>
+  </body>
+</html>
